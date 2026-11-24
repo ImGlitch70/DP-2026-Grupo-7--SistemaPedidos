@@ -9,8 +9,7 @@ Repositorio: `DP-2026-Grupo<7>-SistemaPedidos`
 | --- | --- | --- | --- |
 | [Willy Loconi] | [U24208209] | [@ImGlitch70] | Desarrollador |
 | [Matias Pardo] | [U24208196] | [@usuario] | Desarrollador (Factory Method) |
-| [Grabiel Olaya] | [U24219113] | [@usuario] | Desarrollador (Observer) |
-| [Nombre y apellidos] | [Código] | [@usuario] | Documentación y QA |
+| [Grabiel Olaya] | [U24219113] | [@lebrigrabielweb] | Desarrollador (Observer) |
 
 ## Problema que resuelve
 
