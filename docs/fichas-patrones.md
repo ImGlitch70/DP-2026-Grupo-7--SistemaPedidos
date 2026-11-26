@@ -16,6 +16,7 @@
 | Product | `Pedido` |
 | ConcreteProduct | `PedidoLocal`, `PedidoDelivery`, `PedidoRecojo` |
 
+- **Validaciones:** `PedidoCreator.registrarPedido()` rechaza clientes vacios y pedidos sin productos; `PedidoDeliveryCreator` exige direccion.
 - **Ventajas:** cumple OCP (nuevo tipo = nuevas clases), reduce el acoplamiento entre el cliente y las clases concretas.
 - **Desventajas:** aumenta el número de clases.
 
@@ -47,8 +48,9 @@ Pedido p = creator.registrarPedido(cliente, items);
 | --- | --- |
 | Subject | `Sujeto` (interfaz), implementada por `Pedido` |
 | Observer | `Observador` |
-| ConcreteObserver | `NotificadorCliente`, `ControlInventario`, `PanelCocina` |
+| ConcreteObserver | `NotificadorCliente`, `ControlInventario`, `PanelCocina`, `RegistroAuditoria` |
 
+- **Prueba de extensibilidad:** `RegistroAuditoria` se agrego en el segundo avance sin modificar `Pedido`.
 - **Ventajas:** bajo acoplamiento, nuevos observadores sin tocar `Pedido` (OCP), notificación automática.
 - **Desventajas:** el orden de notificación no está garantizado; muchos observadores pueden afectar el rendimiento.
 
