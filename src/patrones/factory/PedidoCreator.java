@@ -22,6 +22,12 @@ public abstract class PedidoCreator {
     protected abstract Pedido crearPedido(String cliente, List<Producto> items);
 
     public Pedido registrarPedido(String cliente, List<Producto> items) {
+        if (cliente == null || cliente.isBlank()) {
+            throw new IllegalArgumentException("El cliente es obligatorio");
+        }
+        if (items == null || items.isEmpty()) {
+            throw new IllegalArgumentException("El pedido debe tener al menos un producto");
+        }
         Pedido pedido = crearPedido(cliente, items);
         observadores.forEach(pedido::agregarObservador);
         pedido.notificarObservadores();
