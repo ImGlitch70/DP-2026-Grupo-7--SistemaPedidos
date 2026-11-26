@@ -13,6 +13,9 @@ public class PedidoDeliveryCreator extends PedidoCreator {
 
     public PedidoDeliveryCreator(List<Observador> observadores, String direccion) {
         super(observadores);
+        if (direccion == null || direccion.isBlank()) {
+            throw new IllegalArgumentException("El delivery requiere una direccion");
+        }
         this.direccion = direccion;
     }
 
