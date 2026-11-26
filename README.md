@@ -2,7 +2,6 @@
 
 Proyecto Final - Diseño de Patrones (100000SI47) - 2026, Ciclo 2 Agosto  
 Repositorio: `DP-2026-Grupo7-SistemaPedidos`  
-Estado: **Segundo avance (80 %)** - patrones implementados y funcionando.
 
 ## Integrantes
 
