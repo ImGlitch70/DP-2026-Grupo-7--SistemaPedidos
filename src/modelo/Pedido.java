@@ -53,6 +53,11 @@ public abstract class Pedido implements Sujeto {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Pedido #" + id + " [" + getTipo() + "] cliente=" + cliente + ", estado=" + estado;
+    }
+
     public int getId() { return id; }
     public String getCliente() { return cliente; }
     public List<Producto> getItems() { return items; }
