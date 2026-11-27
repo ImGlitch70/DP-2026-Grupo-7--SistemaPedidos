@@ -8,7 +8,7 @@ Repositorio: `DP-2026-Grupo7-SistemaPedidos`
 | Nombre | Código | Usuario de GitHub | Rol |
 | --- | --- | --- | --- |
 | Willy Loconi | U24208209 | [@ImGlitch70](https://github.com/ImGlitch70) | Desarrollador (Main, documentación) |
-| Matías Pardo | U24208196 | [@mattiaspardofigueroacordova-gif] (https://github.com/mattiaspardofigueroacordova-gif).| Desarrollador (Factory Method) |
+| Matías Pardo | U24208196 | [@mattiaspardofigueroacordova-gif]| Desarrollador (Factory Method) |
 | Grabiel Olaya | U24219113 | [@lebrigrabielweb] | Desarrollador (Observer) |
 
 ## Problema que resuelve
