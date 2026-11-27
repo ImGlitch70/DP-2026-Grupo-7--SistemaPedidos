@@ -37,8 +37,29 @@ public class PruebaFactoryMethod {
         verificar("Recojo: envio 0", recojo.calcularCostoEnvio() == 0.0);
     }
 
+    private static boolean lanzaError(Runnable accion) {
+        try {
+            accion.run();
+            return false;
+        } catch (IllegalArgumentException e) {
+            return true;
+        }
+    }
+
+    private static void pruebasValidaciones() {
+        List<Observador> ninguno = List.of();
+        List<Producto> items = List.of(new Producto("Pizza", 32.0));
+        PedidoLocalCreator local = new PedidoLocalCreator(ninguno);
+
+        verificar("Rechaza pedido sin productos", lanzaError(() -> local.registrarPedido("Ana", List.of())));
+        verificar("Rechaza cliente vacio", lanzaError(() -> local.registrarPedido(" ", items)));
+        verificar("Delivery rechaza direccion vacia", lanzaError(() -> new PedidoDeliveryCreator(ninguno, "")));
+        verificar("toString incluye el tipo", local.registrarPedido("Ana", items).toString().contains("[LOCAL]"));
+    }
+
     public static void main(String[] args) {
         pruebasTipos();
+        pruebasValidaciones();
         if (fallos > 0) {
             System.out.println("Pruebas con fallos: " + fallos);
             System.exit(1);
